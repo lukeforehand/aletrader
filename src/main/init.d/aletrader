@@ -7,7 +7,7 @@ LIB_DIR=/opt/$PROG
 . /etc/init.d/functions
 
 JAVA_OPTS="-D$PROG $JAVA_OPTS -server"
-CLASSPATH=$( echo $LIB_DIR/WEB-INF/lib/*.jar . | sed 's/ /:/g'):$LIB_DIR/WEB-INF/classes:$JAVA_HOME/lib/tools.jar
+CLASSPATH=$( echo $LIB_DIR/WEB-INF/lib/*.jar . | sed 's/ /:/g'):$LIB_DIR/WEB-INF/classes
 
 CMD="java $JAVA_OPTS -classpath $CLASSPATH com.aletrader.Server $PORT / $LIB_DIR"
 
