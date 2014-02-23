@@ -4,7 +4,7 @@ import org.eclipse.jetty.server._;
 import org.eclipse.jetty.server.bio.SocketConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
 
-class Server {
+object Server {
 
 	def main(args: Array[String]) {
 		

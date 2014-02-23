@@ -1,6 +1,7 @@
 #!/bin/bash
 
 PROG=aletrader
+PORT=8080
 LIB_DIR=/opt/$PROG
 
 . /etc/init.d/functions
