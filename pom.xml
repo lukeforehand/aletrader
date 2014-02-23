@@ -9,6 +9,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<scala.version>2.10.3</scala.version>
+		<jetty.version>8.1.14.v20131031</jetty.version>
 	</properties>
 	<build>
 		<sourceDirectory>src/main/scala</sourceDirectory>
@@ -29,6 +30,11 @@
 				<configuration>
 					<scalaVersion>${scala.version}</scalaVersion>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.mortbay.jetty</groupId>
+				<artifactId>jetty-maven-plugin</artifactId>
+				<version>${jetty.version}</version>
 			</plugin>
 		</plugins>
 	</build>
