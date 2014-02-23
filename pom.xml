@@ -82,8 +82,8 @@
                             <group>Applications/System</group>
                             <defaultDirmode>755</defaultDirmode>
                             <defaultFilemode>644</defaultFilemode>
-                            <defaultUsername>ec2-user</defaultUsername>
-                            <defaultGroupname>ec2-user</defaultGroupname>
+                            <defaultUsername>root</defaultUsername>
+                            <defaultGroupname>root</defaultGroupname>
                             <mappings>
                                 <mapping>
                                     <directory>/opt/${project.artifactId}</directory>
@@ -97,6 +97,7 @@
                                 <mapping>
                                     <directory>/etc/init.d</directory>
                                     <directoryIncluded>false</directoryIncluded>
+                                    <filemode>755</filemode>
                                     <sources>
                                         <source>
                                             <location>${project.basedir}/src/main/init.d</location>
