@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PROG=${project.artifactId}
+PROG=aletrader
 LIB_DIR=/opt/$PROG
 
 . /etc/init.d/functions
