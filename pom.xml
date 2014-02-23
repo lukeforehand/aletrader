@@ -27,7 +27,7 @@
             <version>${scala.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.eclipse.jetty</groupId>
+            <groupId>org.eclipse.jetty.aggregate</groupId>
             <artifactId>jetty-webapp</artifactId>
             <version>${jetty.version}</version>
         </dependency>
