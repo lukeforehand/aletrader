@@ -11,3 +11,6 @@ deploy:
 * mvn clean install -P rpm
 * sudo find ./target/rpm/aletrader/RPMS -name "aletrader*" -exec rpm -Uvh {} \;
 * sudo /etc/init.d/aletrader restart
+
+log:
+* tailf /var/log/aletrader.log
