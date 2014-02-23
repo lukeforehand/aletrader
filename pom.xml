@@ -94,6 +94,15 @@
                                         </source>
                                     </sources>
                                 </mapping>
+                                <mapping>
+                                    <directory>/etc/init.d</directory>
+                                    <directoryIncluded>false</directoryIncluded>
+                                    <sources>
+                                        <source>
+                                            <location>${project.basedir}/src/main/init.d</location>
+                                        </source>
+                                    </sources>
+                                </mapping>
                             </mappings>
                         </configuration>
                         <executions>
