@@ -1,3 +1,4 @@
 target/
 *.sublime-project
 *.sublime-workspace
+aletrader.pem
