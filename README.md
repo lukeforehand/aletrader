@@ -5,3 +5,4 @@ AleTrader.com
 
 [Tests](docs/tests.md)
 
+[License](LICENSE.md)
