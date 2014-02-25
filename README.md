@@ -1,7 +1,7 @@
 AleTrader.com
 -------------
 
-[Creating a cellar](docs/cellar.md)
+[Creating a cellar](issues/1)
 
 [Tests](docs/tests.md)
 
