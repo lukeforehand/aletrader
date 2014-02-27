@@ -12,7 +12,7 @@
 
 	<display-name>AleTrader.com</display-name>
 	<servlet>
-		<servlet-name>AleTrader.com REST Service</servlet-name>
+		<servlet-name>aletrader</servlet-name>
 		<servlet-class>com.sun.jersey.spi.spring.container.servlet.SpringServlet</servlet-class>
 		<init-param>
 			<param-name>com.sun.jersey.config.property.packages</param-name>
@@ -21,8 +21,17 @@
 		<load-on-startup>1</load-on-startup>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>AleTrader.com REST Service</servlet-name>
+		<servlet-name>aletrader</servlet-name>
 		<url-pattern>/*</url-pattern>
+	</servlet-mapping>
+
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/*.html</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>default</servlet-name>
+		<url-pattern>/*.png</url-pattern>
 	</servlet-mapping>
 
 </web-app>
