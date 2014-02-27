@@ -4,7 +4,8 @@ import org.eclipse.jetty.server._;
 import org.eclipse.jetty.server.bio.SocketConnector;
 import org.eclipse.jetty.webapp.WebAppContext;
 
-class Server {
+// must be object to invoke main method
+object Server {
 
 	def main(args: Array[String]) {
 		
