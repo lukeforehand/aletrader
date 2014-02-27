@@ -2,6 +2,7 @@ package com.aletrader.ws;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
 
 import org.springframework.stereotype.Component;
 
@@ -11,6 +12,7 @@ class AleTraderService {
 
 	@GET
 	@Path("/ping")
+	@Produces("text/plain")
 	def ping(): String = {
 		return "pong";
 	}
