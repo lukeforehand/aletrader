@@ -12,7 +12,7 @@ class AleTraderService {
 
 	@GET
 	@Path("/ping")
-	@Produces("text/plain")
+	@Produces(Array("text/plain"))
 	def ping(): String = {
 		return "pong";
 	}
