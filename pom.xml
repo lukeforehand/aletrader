@@ -18,6 +18,7 @@
         <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
         <scala.version>2.10.3</scala.version>
         <jetty.version>8.1.14.v20131031</jetty.version>
+        <jersey.version>2.6</jersey.version>
     </properties>
 
     <dependencies>
@@ -34,20 +35,23 @@
         <dependency>
             <groupId>org.glassfish.jersey.ext</groupId>
             <artifactId>jersey-spring3</artifactId>
-            <version>2.6</version>
+            <version>${jersey.version}</version>
+        </dependency>
+        <dependency>
+          <groupId>com.fasterxml.jackson.jaxrs</groupId>
+          <artifactId>jackson-jaxrs-json-provider</artifactId>
+          <version>2.3.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.module</groupId>
+            <artifactId>jackson-module-scala_2.10</artifactId>
+            <version>2.3.1</version>
         </dependency>
         <dependency>
             <groupId>org.elasticsearch</groupId>
             <artifactId>elasticsearch</artifactId>
             <version>1.0.1</version>
         </dependency>
-    <!-- once we get jackson serialization going
-            <dependency>
-                <groupId>com.fasterxml.jackson.jaxrs</groupId>
-                <artifactId>jackson-jaxrs-json-provider</artifactId>
-                <version>2.2.3</version>
-            </dependency>
-        -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
