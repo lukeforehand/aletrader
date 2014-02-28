@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 // singleton to be used for serializing repository layer or other purposes
 object JsonSerializer {
 
-	val mapper = new ObjectMapper();
+	var mapper = new ObjectMapper();
 	mapper.registerModule(DefaultScalaModule);
 	mapper.enable(SerializationFeature.INDENT_OUTPUT);
 
