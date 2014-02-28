@@ -2,9 +2,8 @@ package com.aletrader.ws;
 
 import javax.ws.rs.ext.ContextResolver;
 import javax.ws.rs.ext.Provider;
-import javax.ws.rs.Produces
-import scala.Array
-import javax.ws.rs.core.MediaType
+import javax.ws.rs.Produces;
+import javax.ws.rs.core.MediaType;
 import com.aletrader.api.JsonSerializer;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
