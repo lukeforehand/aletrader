@@ -31,10 +31,8 @@ class AleTraderRepositoryTest {
 	}
 
 	@Test
-	def testClusterState() {
-		var response = repo.clusterState();
-		println(response.getClusterName() + "->" + response.getState());
-		
+	def testSearchUpc() {
+		println(repo.searchUpc("606905008303"));
 	}
 
 }

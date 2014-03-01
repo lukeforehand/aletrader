@@ -1,18 +1,19 @@
 package com.aletrader.ws;
 
-import com.aletrader.api.model.TestModel;
+import com.aletrader.api.AleTraderRepository;
+import com.aletrader.brewerydb._;
 
 import javax.ws.rs.core.MediaType;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 
-import org.springframework.stereotype.Component;
 
-@Component
 @Path("/")
 class AleTraderService { //TODO: extract from this an interface under the api package
+
+	var repo = new AleTraderRepository();
 
 	@GET
 	@Path("/ping")
@@ -22,10 +23,10 @@ class AleTraderService { //TODO: extract from this an interface under the api pa
 	}
 
 	@GET
-	@Path("/test")
+	@Path("/upc/{code}")
 	@Produces(Array(MediaType.APPLICATION_JSON))
-	def test(): TestModel = {
-		return new TestModel("test");
+	def searchUpc(@PathParam("code") code: String): Beers = {
+		return repo.searchUpc(code);
 	}
 
 }

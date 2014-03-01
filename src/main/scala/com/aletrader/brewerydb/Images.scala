@@ -1,12 +1,10 @@
 package com.aletrader.brewerydb;
 
 /*
-
-      {
-        "medium" : "",
-        "large" : "",
-        "icon" : ""
-      }
+{
+	"medium" : "",
+	"large" : "",
+	"icon" : ""
 }
 */
 

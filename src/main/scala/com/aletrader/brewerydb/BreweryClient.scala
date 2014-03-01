@@ -21,7 +21,7 @@ class BreweryClient {
 
 	val config = new ClientConfig(new JacksonJsonProvider(JsonSerializer.mapper));
 
-	val client = ClientBuilder.newClient(config);
+	var client = ClientBuilder.newClient(config);
 
 	def getKey(): String = {
 		return key;
@@ -39,6 +39,13 @@ class BreweryClient {
 			.target(String.format(baseUri, "breweries") + "&established=" + yearEstablished)
 			.request(MediaType.APPLICATION_JSON).get()
 			.readEntity(classOf[Breweries]);
+	}
+
+	def searchUpc(code: String): Beers = {
+		return client
+			.target(String.format(baseUri, "search/upc") + "&code=" + code)
+			.request(MediaType.APPLICATION_JSON).get()
+			.readEntity(classOf[Beers]);
 	}
 
 }
