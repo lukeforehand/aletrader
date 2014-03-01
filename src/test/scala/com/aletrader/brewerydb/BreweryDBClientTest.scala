@@ -1,12 +1,16 @@
 package com.aletrader.brewerydb;
 
-import org.junit.Test;
-
 import com.aletrader.api.JsonSerializer;
+
+import java.util.PropertyResourceBundle;
+import java.io.File;
+import java.io.FileInputStream;
+
+import org.junit.Test;
 
 class BreweryClientTest {
 
-	val client = new BreweryDBClient();
+	val client = new BreweryDBClient(new PropertyResourceBundle(new FileInputStream(new File("/opt/aletrader/brewerydb.properties"))).getString("key"));
 
 	@Test
 	def testGetKey() {

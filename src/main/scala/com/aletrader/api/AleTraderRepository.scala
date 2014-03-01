@@ -1,6 +1,10 @@
 
 package com.aletrader.api;
 
+import java.util.PropertyResourceBundle;
+import java.io.File;
+import java.io.FileInputStream;
+
 import org.elasticsearch.client.Client;
 import org.elasticsearch.action.admin.cluster.state.ClusterStateResponse;
 import org.elasticsearch.node.Node;
@@ -14,7 +18,7 @@ class AleTraderRepository(node: Node) {
 	// elasticsearch client
 	var esClient = node.client();
 
-	var breweryDbClient = new BreweryDBClient();
+	var breweryDbClient = new BreweryDBClient(new PropertyResourceBundle(new FileInputStream(new File("/opt/aletrader/brewerydb.properties"))).getString("key"));
 
 	//TODO: add dao layer --> need to choose technology
 

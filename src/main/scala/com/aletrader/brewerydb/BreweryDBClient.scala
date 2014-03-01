@@ -1,10 +1,5 @@
 package com.aletrader.brewerydb;
 
-import java.util.PropertyResourceBundle;
-import org.springframework.stereotype.Component;
-import java.io.File;
-import java.io.FileInputStream;
-
 import org.glassfish.jersey.client.ClientConfig;
 import javax.ws.rs.client.ClientBuilder;
 import javax.ws.rs.core.MediaType;
@@ -12,10 +7,7 @@ import javax.ws.rs.core.MediaType;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider; 
 import com.aletrader.api.JsonSerializer;
 
-@Component
-class BreweryDBClient {
-
-	val key = new PropertyResourceBundle(new FileInputStream(new File("/opt/aletrader/brewerydb.properties"))).getString("key");
+class BreweryDBClient(val key: String) {
 
 	val baseUri = "http://api.brewerydb.com/v2/%s/?key=" + key;
 
