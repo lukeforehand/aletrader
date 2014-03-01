@@ -14,7 +14,7 @@ class AleTraderRepository(node: Node) {
 	// elasticsearch client
 	var esClient = node.client();
 
-	var breweryDb = new BreweryClient();
+	var breweryDbClient = new BreweryDBClient();
 
 	//TODO: add dao layer --> need to choose technology
 
@@ -25,12 +25,12 @@ class AleTraderRepository(node: Node) {
 	}
 
 	def verifyBreweryDb(): String = {
-		return breweryDb.verifyKey();
+		return breweryDbClient.verifyKey();
 	}
 
 	// first actual repo method
 	def searchUpc(code: String): Beers = {
-		return breweryDb.searchUpc(code);
+		return breweryDbClient.searchUpc(code);
 	}
 
 }
