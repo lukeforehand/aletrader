@@ -7,8 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B221BFDA18C3EB3B00FAA120 /* UPCSearchController.m in Sources */ = {isa = PBXBuildFile; fileRef = B221BFD818C3EB3B00FAA120 /* UPCSearchController.m */; };
+		B221BFDB18C3EB3B00FAA120 /* UPCSearchController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B221BFD918C3EB3B00FAA120 /* UPCSearchController.xib */; };
+		B221BFDE18C3ED7C00FAA120 /* UPCOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = B221BFDD18C3ED7C00FAA120 /* UPCOverlayView.m */; };
+		B221BFE018C3EEC600FAA120 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B221BFDF18C3EEC600FAA120 /* AVFoundation.framework */; };
+		B221BFE418C3EF0F00FAA120 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B221BFE318C3EF0F00FAA120 /* CoreImage.framework */; };
 		B2E2471F18C3D94E00AFFB56 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E2471E18C3D94E00AFFB56 /* Foundation.framework */; };
-		B2E2472118C3D94E00AFFB56 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E2472018C3D94E00AFFB56 /* CoreGraphics.framework */; };
 		B2E2472318C3D94E00AFFB56 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B2E2472218C3D94E00AFFB56 /* UIKit.framework */; };
 		B2E2472918C3D94E00AFFB56 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B2E2472718C3D94E00AFFB56 /* InfoPlist.strings */; };
 		B2E2472B18C3D94E00AFFB56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B2E2472A18C3D94E00AFFB56 /* main.m */; };
@@ -32,6 +36,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B221BFD718C3EB3B00FAA120 /* UPCSearchController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UPCSearchController.h; sourceTree = "<group>"; };
+		B221BFD818C3EB3B00FAA120 /* UPCSearchController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPCSearchController.m; sourceTree = "<group>"; };
+		B221BFD918C3EB3B00FAA120 /* UPCSearchController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UPCSearchController.xib; sourceTree = "<group>"; };
+		B221BFDC18C3ED4D00FAA120 /* UPCOverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UPCOverlayView.h; sourceTree = "<group>"; };
+		B221BFDD18C3ED7C00FAA120 /* UPCOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UPCOverlayView.m; sourceTree = "<group>"; };
+		B221BFDF18C3EEC600FAA120 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		B221BFE118C3EEF900FAA120 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		B221BFE318C3EF0F00FAA120 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		B221BFE518C3EF2D00FAA120 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		B2E2471B18C3D94E00AFFB56 /* AleTrader.com.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AleTrader.com.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2E2471E18C3D94E00AFFB56 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B2E2472018C3D94E00AFFB56 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,7 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B2E2472118C3D94E00AFFB56 /* CoreGraphics.framework in Frameworks */,
+				B221BFE418C3EF0F00FAA120 /* CoreImage.framework in Frameworks */,
+				B221BFE018C3EEC600FAA120 /* AVFoundation.framework in Frameworks */,
 				B2E2472318C3D94E00AFFB56 /* UIKit.framework in Frameworks */,
 				B2E2471F18C3D94E00AFFB56 /* Foundation.framework in Frameworks */,
 			);
@@ -96,6 +110,10 @@
 		B2E2471D18C3D94E00AFFB56 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B221BFE518C3EF2D00FAA120 /* CoreMedia.framework */,
+				B221BFE318C3EF0F00FAA120 /* CoreImage.framework */,
+				B221BFE118C3EEF900FAA120 /* CoreVideo.framework */,
+				B221BFDF18C3EEC600FAA120 /* AVFoundation.framework */,
 				B2E2471E18C3D94E00AFFB56 /* Foundation.framework */,
 				B2E2472018C3D94E00AFFB56 /* CoreGraphics.framework */,
 				B2E2472218C3D94E00AFFB56 /* UIKit.framework */,
@@ -111,6 +129,11 @@
 				B2E2472E18C3D94E00AFFB56 /* AppDelegate.m */,
 				B2E2473018C3D94E00AFFB56 /* Images.xcassets */,
 				B2E2472518C3D94E00AFFB56 /* Supporting Files */,
+				B221BFD718C3EB3B00FAA120 /* UPCSearchController.h */,
+				B221BFD818C3EB3B00FAA120 /* UPCSearchController.m */,
+				B221BFD918C3EB3B00FAA120 /* UPCSearchController.xib */,
+				B221BFDC18C3ED4D00FAA120 /* UPCOverlayView.h */,
+				B221BFDD18C3ED7C00FAA120 /* UPCOverlayView.m */,
 			);
 			path = AleTrader.com;
 			sourceTree = "<group>";
@@ -224,6 +247,7 @@
 			files = (
 				B2E2472918C3D94E00AFFB56 /* InfoPlist.strings in Resources */,
 				B2E2473118C3D94E00AFFB56 /* Images.xcassets in Resources */,
+				B221BFDB18C3EB3B00FAA120 /* UPCSearchController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,7 +266,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B221BFDE18C3ED7C00FAA120 /* UPCOverlayView.m in Sources */,
 				B2E2472F18C3D94E00AFFB56 /* AppDelegate.m in Sources */,
+				B221BFDA18C3EB3B00FAA120 /* UPCSearchController.m in Sources */,
 				B2E2472B18C3D94E00AFFB56 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
