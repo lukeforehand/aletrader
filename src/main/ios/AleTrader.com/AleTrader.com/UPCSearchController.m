@@ -1,11 +1,3 @@
-//
-//  UPCSearchController.m
-//  AleTrader.com
-//
-//  Created by Lindsay Berger on 3/2/14.
-//  Copyright (c) 2014 Luke Forehand. All rights reserved.
-//
-
 #import "UPCSearchController.h"
 #import "UPCOverlayView.h"
 
@@ -14,7 +6,7 @@
 @property(nonatomic, strong) AVCaptureSession *session;
 @property(nonatomic, strong) UIView *previewView;
 @property(nonatomic, strong) AVCaptureVideoPreviewLayer *previewLayer;
-@property(nonatomic, strong) CMGOverlayView *overlayView;
+@property(nonatomic, strong) UPCOverlayView *overlayView;
 
 @end
 
@@ -35,7 +27,7 @@
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_previewView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_previewView)]];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_previewView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_previewView)]];
     
-    self.overlayView = [[CMGOverlayView alloc] init];
+    self.overlayView = [[UPCOverlayView alloc] init];
     self.overlayView.translatesAutoresizingMaskIntoConstraints = NO;
     [self.view addSubview:self.overlayView];
     [self.view addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_overlayView]|" options:0 metrics:nil views:NSDictionaryOfVariableBindings(_overlayView)]];

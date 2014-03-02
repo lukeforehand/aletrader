@@ -1,6 +1,6 @@
 #import "UPCOverlayView.h"
 
-@implementation CMGOverlayView
+@implementation UPCOverlayView
 
 - (id)init
 {

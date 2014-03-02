@@ -1,5 +1,5 @@
 #import <UIKit/UIKit.h>
 
-@interface CMGOverlayView : UIView
+@interface UPCOverlayView : UIView
 
 @end
