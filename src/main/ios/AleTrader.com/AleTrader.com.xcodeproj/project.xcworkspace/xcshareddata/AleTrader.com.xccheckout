@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>2EB2B3E0-B4A3-46B1-B477-587278016F87</string>
+	<key>IDESourceControlProjectName</key>
+	<string>AleTrader.com</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>CED2B518-4F57-4D02-A7B2-2CE7AF67E86D</key>
+		<string>https://github.com/lukeforehand/aletrader</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>src/main/ios/AleTrader.com/AleTrader.com.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>CED2B518-4F57-4D02-A7B2-2CE7AF67E86D</key>
+		<string>../../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/lukeforehand/aletrader</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>CED2B518-4F57-4D02-A7B2-2CE7AF67E86D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>CED2B518-4F57-4D02-A7B2-2CE7AF67E86D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>aletrader</string>
+		</dict>
+	</array>
+</dict>
+</plist>
