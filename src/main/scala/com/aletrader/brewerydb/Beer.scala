@@ -12,6 +12,11 @@ package com.aletrader.brewerydb;
 	    "createDate": "2012-01-03 02:41:33",
 	    "name": "Pint"
 	},
+    "srm":{
+        "id":41,
+        "name":"Over 40",
+       "hex":"000000"
+    },
 	"style": {
 	    "id": 30,
 	    "category": {
@@ -39,6 +44,7 @@ package com.aletrader.brewerydb;
 	    "large": "http://s3.amazonaws.com/",
 	    "icon": "http://s3.amazonaws.com/"
 	},
+	"srmId": 1,
 	"availableId": 4,
 	"styleId": 30,
 	"updateDate": "2012-03-22 13:05:03",
@@ -69,9 +75,11 @@ class Beer(
 	val statusDisplay: String,
 	val foodPairings: String,
 	val glass: Glass,
+	val srm: Srm,
 	val style: Style,
 	val createDate: String,
 	val labels: Images,
+	val srmId: Int,
  	val availableId: Int,
  	val styleId: Int,
  	val updateDate: String,

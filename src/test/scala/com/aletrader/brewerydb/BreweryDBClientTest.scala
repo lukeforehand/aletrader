@@ -32,7 +32,8 @@ class BreweryClientTest {
 
 	@Test
 	def testSearchUpc() {
-		var beers = client.searchUpc("606905008303");
+		var beers = client.searchUpc("04085645");
+		println(beers);
 		beers.data.foreach(beer => {
 			println(beer.name);
 		});
