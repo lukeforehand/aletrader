@@ -1,5 +1,6 @@
 #import "UPCSearchController.h"
 #import "UPCOverlayView.h"
+#import "SearchResultController.h"
 
 @interface UPCSearchController ()<AVCaptureMetadataOutputObjectsDelegate>
 
@@ -94,6 +95,8 @@
     for(AVMetadataMachineReadableCodeObject *recognizedObject in metadataObjects) {
         NSLog(@"%@", recognizedObject.stringValue);
         
+        _upcCodeText = recognizedObject.stringValue;
+        
         CGPoint p1 = CGPointMake(0.4, 0.4);
         CGPointMakeWithDictionaryRepresentation((__bridge CFDictionaryRef)(recognizedObject.corners[0]), &p1);
         CGPoint p2 = CGPointMake(0.5, 0.4);
@@ -107,11 +110,27 @@
         CGPathAddLineToPoint(pathRef, &transform, 1-p2.y, p2.x);
         CGPathAddLineToPoint(pathRef, &transform, 1-p3.y, p3.x);
         CGPathAddLineToPoint(pathRef, &transform, 1-p4.y, p4.x);
+        
         CGPathCloseSubpath(pathRef);
         
     }
     ((CAShapeLayer *) self.overlayView.layer).path = pathRef;
     CGPathRelease(pathRef);
+    
+    [self.session stopRunning];
+    
+    [self performSegueWithIdentifier: @"SearchResult" sender: self];
+    
+}
+
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    NSLog(@"prepareForSegue: %@", segue.identifier);
+    if([segue.identifier isEqualToString:@"SearchResult"]) {
+        SearchResultController *transferViewController = segue.destinationViewController;
+        transferViewController.upcCodeText = _upcCodeText;
+    }
+
 }
 
 -(void) viewDidLayoutSubviews {
