@@ -35,7 +35,7 @@
     for (id beer in beers) {
         self.searchResult.text = [[self.searchResult.text stringByAppendingString: beer[@"name"]] stringByAppendingString: @"\n"];
     }
-
+    
 }
 
 - (NSDictionary *)searchUpc:(NSString *)upcCode {

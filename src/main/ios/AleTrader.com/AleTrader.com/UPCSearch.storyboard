@@ -17,13 +17,14 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="q8s-nu-JfF"/>
                     <connections>
                         <segue destination="Fnm-Du-DoQ" kind="modal" identifier="SearchResult" id="bqc-8M-2px"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kMj-1X-LFG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-628" y="-71"/>
+            <point key="canvasLocation" x="-86" y="-57"/>
         </scene>
         <!--Search Result Controller-->
         <scene sceneID="MuC-fm-pbv">
@@ -63,6 +64,10 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="2Zj-up-MXh" appends="YES" id="gW5-dH-8Og"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="searchResult" destination="Vos-JD-tDC" id="Nuc-3C-5oT"/>
@@ -70,8 +75,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s9A-eK-Zbf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="left" id="2Zj-up-MXh" userLabel="Swipe Gesture Go back">
+                    <connections>
+                        <segue destination="hlx-cP-HP3" kind="modal" id="B16-bq-AF1"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5" y="-71"/>
+            <point key="canvasLocation" x="547" y="-57"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
