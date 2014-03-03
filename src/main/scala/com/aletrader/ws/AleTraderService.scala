@@ -16,6 +16,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
 
+// make @Singleton to avoid instantiation of the repo every time
 @Path("/")
 class AleTraderService { //TODO: extract from this an interface under the api package
 
