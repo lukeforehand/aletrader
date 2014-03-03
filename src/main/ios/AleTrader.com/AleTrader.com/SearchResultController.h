@@ -13,5 +13,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *upcCode;
 @property (strong, nonatomic)          NSString *upcCodeText;
 
+@property (strong, nonatomic) IBOutlet UILabel *searchResult;
+
 @end
 
