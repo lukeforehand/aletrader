@@ -15,6 +15,11 @@ import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 
+import org.glassfish.jersey.client.ClientConfig;
+import javax.ws.rs.client.ClientBuilder;
+
+import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
+import com.aletrader.api.JsonSerializer;
 
 // make @Singleton to avoid instantiation of the repo every time
 @Path("/")
@@ -22,13 +27,18 @@ class AleTraderService { //TODO: extract from this an interface under the api pa
 
 	var repo = new AleTraderRepository();
 
-	@GET
-	@Path("/ping")
-	@Produces(Array(MediaType.TEXT_PLAIN))
-	def ping(): String = {
-		return "pong";
-	}
+	var beerEventClient = ClientBuilder.newClient(new ClientConfig(new JacksonJsonProvider(JsonSerializer.mapper)));
 
+	// proxy beer-event-scraper
+	@GET
+	@Path("/beer_events")
+	@Produces(Array(MediaType.TEXT_HTML))
+	def beerEvents(@QueryParam("results") results: Int): String = {
+		return beerEventClient
+			.target("http://aletrader.com:8081/beer_events?results=".concat(results.toString()))
+			.request(MediaType.TEXT_HTML).get()
+			.readEntity(classOf[String]);
+	}
 
 	//
 	// Cellar Management
@@ -73,6 +83,13 @@ class AleTraderService { //TODO: extract from this an interface under the api pa
 	@Produces(Array(MediaType.APPLICATION_JSON))
 	def productSearch(@QueryParam("q") beerQuery: String): Beers = {
 		return repo.searchBeers(beerQuery);
+	}
+
+	@GET
+	@Path("/ping")
+	@Produces(Array(MediaType.TEXT_PLAIN))
+	def ping(): String = {
+		return "pong";
 	}
 
 }
