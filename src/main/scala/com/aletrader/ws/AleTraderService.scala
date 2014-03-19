@@ -5,6 +5,8 @@ import com.aletrader.api.model.CellarItem;
 import com.aletrader.brewerydb._;
 import com.aletrader.ws.model.CellarItemRequest;
 
+import javax.inject.Singleton;import javax.inject.Singleton;
+
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
@@ -21,7 +23,7 @@ import javax.ws.rs.client.ClientBuilder;
 import com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider;
 import com.aletrader.api.JsonSerializer;
 
-// make @Singleton to avoid instantiation of the repo every time
+@Singleton // avoid instantiation of the repo every time
 @Path("/")
 class AleTraderService { //TODO: extract from this an interface under the api package
 
