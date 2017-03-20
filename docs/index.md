@@ -1,16 +1,16 @@
-# AleTrader.com
-
 ---
 layout: page
 title: Aletrader.com
-tagline:
-description:
+tagline: tagline
+description: description
 ---
 
-[License](LICENSE.md)
+# AleTrader.com
 
 ### Use Cases
-* [Creating a cellar](/../../issues/1)
-* [Tasting events](/../../issues/5)
-* [Cellar reports](/../../issues/7)
+* [Creating a cellar](https://github.com/lukeforehand/aletrader/issues/1)
+* [Tasting events](https://github.com/lukeforehand/aletrader/issues/5)
+* [Cellar reports](https://github.com/lukeforehand/aletrader/issues/7)
+
+[License](LICENSE.md)
 
